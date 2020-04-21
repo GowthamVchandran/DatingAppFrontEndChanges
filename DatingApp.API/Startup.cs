@@ -28,15 +28,15 @@ namespace DatingApp.API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddEntityFrameworkSqlServer()
+            services
            .AddDbContext<DataContext>(options =>
               options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             
             // services.AddDbContext<DataContext>(a=>a.UseSqlServer
             // (Configuration.GetConnectionString("DefaultConnection")));            
             services.AddControllers();
-            services.AddCors();
-            
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddCors();            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

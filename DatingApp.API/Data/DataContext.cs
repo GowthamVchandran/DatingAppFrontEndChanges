@@ -20,5 +20,7 @@ namespace DatingApp.API.Data
             optionsBuilder.UseSqlServer("Data Source=USER-PC\\SQLEXPRESS;Initial Catalog=student;Integrated Security=True");
         }
         public DbSet<User> Users{get;set;}
+
+        public DbSet<UserDetail> UserDetails {get;set;}
     }
 }

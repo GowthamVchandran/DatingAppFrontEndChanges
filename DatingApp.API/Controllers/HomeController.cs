@@ -21,12 +21,12 @@ namespace DatingApp.API.Controllers
         
         [HttpGet] 
        [Route("Get")]
-        public  async Task<IActionResult> Get()
-        {
-             var result = await _context.Users.ToListAsync();       
-              
-              return Ok(result);
-        }
+            public  async Task<IActionResult> Get()
+            {
+                var result = await _context.Users.ToListAsync();       
+                
+                return Ok(result);
+            }
 
         [HttpGet]  
         [Route("GetEach")]             
